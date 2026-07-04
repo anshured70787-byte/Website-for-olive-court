@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --gold: #d9a441;
+  --night: #111111;
+  --charcoal: #1b1b1b;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--night);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--gold); color: #111; }
+
+.container-shell {
+  width: min(100% - 2rem, 1280px);
+  margin-inline: auto;
+}
+
+.luxury-surface {
+  background:
+    radial-gradient(circle at top left, rgba(217, 164, 65, .20), transparent 28rem),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, .08), transparent 24rem),
+    linear-gradient(145deg, rgba(17, 17, 17, .96), rgba(0, 0, 0, .98));
+}
+
+.glass-card {
+  border: 1px solid rgba(255, 255, 255, .08);
+  background: rgba(255, 255, 255, .055);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .18);
+}
+
+.gold-kicker {
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.gold-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 4.5rem;
+  height: 1px;
+  margin-right: 1rem;
+  vertical-align: middle;
+  background: var(--gold);
+}
